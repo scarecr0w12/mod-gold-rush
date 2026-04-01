@@ -17,6 +17,18 @@ playerbots into the area to create a PvPvE scramble.
 - Gold Rush bot routing, hotspot pressure, and related behavior depend on
   Playerbots APIs.
 
+## Compatibility
+
+- Built for AzerothCore-based setups that include `mod-playerbots`.
+- Not compatible with a stock AzerothCore setup that does not have
+  `mod-playerbots` installed.
+- Gold Rush directly includes Playerbots headers and uses Playerbots runtime
+  APIs for routing bots to event hotspots.
+- If `mod-playerbots` is missing, Gold Rush should be expected to fail to
+  build or fail to function correctly.
+- Best fit: the same Playerbot-oriented AzerothCore environment this module is
+  being developed and tested against.
+
 ## Features
 
 - Schedules Gold Rush events on a random interval.

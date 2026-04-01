@@ -8,6 +8,8 @@ All notable changes to `mod-gold-rush` will be documented in this file.
 - Standalone repository documentation in `README.md`.
 - Initial `CHANGELOG.md` for tracking module releases.
 - Clear documentation that `mod-playerbots` is a required dependency.
+- Added a compatibility section describing the AzerothCore + Playerbots
+  expectations for this module.
 
 ### Changed
 - Loosened Gold Rush hotspot selection so events can fall back to eligible
