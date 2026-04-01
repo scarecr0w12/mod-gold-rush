@@ -6,6 +6,17 @@ eligible open-world zone, anchors on a live player, spawns temporary resource
 nodes near the hotspot, announces the event to the server, and can route
 playerbots into the area to create a PvPvE scramble.
 
+## Requirements
+
+> **Required dependency:** `mod-playerbots` must be installed and enabled.
+> Gold Rush includes direct playerbot integration and will not work correctly
+> without the Playerbots module.
+
+- Requires AzerothCore.
+- Requires `mod-playerbots`.
+- Gold Rush bot routing, hotspot pressure, and related behavior depend on
+  Playerbots APIs.
+
 ## Features
 
 - Schedules Gold Rush events on a random interval.
@@ -30,12 +41,13 @@ playerbots into the area to create a PvPvE scramble.
 
 ## Installation
 
-1. Place `mod-gold-rush` inside the AzerothCore `modules/` directory.
-2. Re-run CMake so AzerothCore detects the module.
-3. Build and install/update your server.
-4. Copy `conf/gold_rush.conf.dist` to your generated module config directory as
+1. Make sure `mod-playerbots` is already installed in your AzerothCore setup.
+2. Place `mod-gold-rush` inside the AzerothCore `modules/` directory.
+3. Re-run CMake so AzerothCore detects the module.
+4. Build and install/update your server.
+5. Copy `conf/gold_rush.conf.dist` to your generated module config directory as
    `gold_rush.conf` if you want local overrides.
-5. Restart `worldserver`.
+6. Restart `worldserver`.
 
 ## Configuration
 
@@ -67,6 +79,8 @@ Important options:
 - Event locations are announced approximately, not with exact coordinates.
 - Hotspots are temporary and despawn at event end.
 - Eligible anchors must be in open-world, non-city, non-sanctuary zones.
+- `mod-playerbots` is required because Gold Rush actively routes random bots to
+  the event hotspot.
 - Blacklisted zones and zone/area pairs are excluded from selection.
 - Node selection alternates between ore-like and herb-like entries when
   possible.
