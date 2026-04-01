@@ -1,0 +1,130 @@
+[worldserver]
+
+###################################################################################################
+#    GOLD RUSH LOGGING
+###################################################################################################
+
+Appender.GoldRushLog = 2,5,0,gold-rush.log,w
+Logger.module.goldrush = 5,GoldRushLog
+
+###################################################################################################
+#    GOLD RUSH MODULE
+###################################################################################################
+#
+#    GoldRush.Enable
+#        Description: Enable the Gold Rush world event scheduler
+#        Default:     1 (enabled)
+#                     0 (disabled)
+
+GoldRush.Enable = 1
+
+#
+#    GoldRush.VerboseLogging
+#        Description: Emit detailed event, spawn, and bot routing logs
+#        Default:     0 (disabled)
+
+GoldRush.VerboseLogging = 0
+
+#
+#    GoldRush.MinIntervalMinutes
+#        Description: Minimum number of minutes between Gold Rush events
+#        Default:     120
+
+GoldRush.MinIntervalMinutes = 120
+
+#
+#    GoldRush.MaxIntervalMinutes
+#        Description: Maximum number of minutes between Gold Rush events
+#        Default:     240
+
+GoldRush.MaxIntervalMinutes = 240
+
+#
+#    GoldRush.DurationMinutes
+#        Description: How long the event stays active once it starts
+#        Default:     20
+
+GoldRush.DurationMinutes = 20
+
+#
+#    GoldRush.MinNodes
+#        Description: Minimum number of temporary nodes to spawn in the hotspot
+#        Default:     15
+
+GoldRush.MinNodes = 15
+
+#
+#    GoldRush.MaxNodes
+#        Description: Maximum number of temporary nodes to spawn in the hotspot
+#        Default:     25
+
+GoldRush.MaxNodes = 25
+
+#
+#    GoldRush.BotsPerFaction
+#        Description: Number of random bots per faction to steer toward the event
+#        Default:     6
+
+GoldRush.BotsPerFaction = 6
+
+#
+#    GoldRush.BotPulseSeconds
+#        Description: How often the module checks whether bot pressure needs a refresh
+#        Default:     30
+
+GoldRush.BotPulseSeconds = 30
+
+#
+#    GoldRush.SpawnRadiusYards
+#        Description: Radius around the anchor player used for temporary spawns
+#        Default:     25.0
+
+GoldRush.SpawnRadiusYards = 25.0
+
+#
+#    GoldRush.NodeEntries
+#        Description: Semicolon-separated list of temporary gameobject template entries.
+#                     Defaults to a mixed endgame bundle.
+#        Default:     191133;190176;190171;190172;189973
+
+GoldRush.NodeEntries = 191133;190176;190171;190172;189973
+
+#
+#    GoldRush.ZonePool
+#        Description: Semicolon-separated list of eligible zones.
+#                     Use Zone|ApproximateSubArea for a better announcement.
+#        Default:     "Un'Goro Crater|Fire Plume Ridge; Winterspring|Frostfire Hot Springs; Eastern Plaguelands|Terrorweb Tunnel; Sholazar Basin|The River's Heart"
+
+GoldRush.ZonePool = "Un'Goro Crater|Fire Plume Ridge; Winterspring|Frostfire Hot Springs; Eastern Plaguelands|Terrorweb Tunnel; Sholazar Basin|The River's Heart"
+
+#
+#    GoldRush.Blacklist
+#        Description: Semicolon-separated list of zones or zone+area pairs to exclude.
+#        Default:     "Stormwind City; Orgrimmar; Dalaran"
+
+GoldRush.Blacklist = "Stormwind City; Orgrimmar; Dalaran"
+
+#
+#    GoldRush.StartMessage
+#        Description: World announcement template for the event start.
+#                     Use {} once for the location text.
+#        Default:     "A seismic anomaly has exposed a massive vein of rich minerals in {}!"
+
+GoldRush.StartMessage = "A seismic anomaly has exposed a massive vein of rich minerals in {}!"
+
+#
+#    GoldRush.EndMessage
+#        Description: World announcement template for the event end.
+#        Default:     "The Gold Rush in {} has been exhausted."
+
+GoldRush.EndMessage = "The Gold Rush in {} has been exhausted."
+
+#
+#    GoldRush.Debug
+#        Description: Enable informational log output for the event scheduler
+#        Default:     1 (enabled)
+#                     0 (disabled)
+
+GoldRush.Debug = 1
+
+###################################################################################################
